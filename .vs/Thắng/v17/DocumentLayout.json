@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{112B48C2-0DCA-46C4-BCAB-61351967B8F3}|Th\u1EAFng.vcxproj|D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\task_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{112B48C2-0DCA-46C4-BCAB-61351967B8F3}|Th\u1EAFng.vcxproj|solutionrelative:task_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{112B48C2-0DCA-46C4-BCAB-61351967B8F3}|Th\u1EAFng.vcxproj|D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\task2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{112B48C2-0DCA-46C4-BCAB-61351967B8F3}|Th\u1EAFng.vcxproj|solutionrelative:task2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{112B48C2-0DCA-46C4-BCAB-61351967B8F3}|Th\u1EAFng.vcxproj|D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\task1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{112B48C2-0DCA-46C4-BCAB-61351967B8F3}|Th\u1EAFng.vcxproj|solutionrelative:task1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{112B48C2-0DCA-46C4-BCAB-61351967B8F3}|Th\u1EAFng.vcxproj|D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\user_name.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{112B48C2-0DCA-46C4-BCAB-61351967B8F3}|Th\u1EAFng.vcxproj|solutionrelative:user_name.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{112B48C2-0DCA-46C4-BCAB-61351967B8F3}|Th\u1EAFng.vcxproj|D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\pass.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{112B48C2-0DCA-46C4-BCAB-61351967B8F3}|Th\u1EAFng.vcxproj|solutionrelative:pass.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{112B48C2-0DCA-46C4-BCAB-61351967B8F3}|Th\u1EAFng.vcxproj|D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\position.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{112B48C2-0DCA-46C4-BCAB-61351967B8F3}|Th\u1EAFng.vcxproj|solutionrelative:position.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "task1.cpp",
+              "DocumentMoniker": "D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\task1.cpp",
+              "RelativeDocumentMoniker": "task1.cpp",
+              "ToolTip": "D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\task1.cpp",
+              "RelativeToolTip": "task1.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-20T14:33:40.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "task2.h",
+              "DocumentMoniker": "D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\task2.h",
+              "RelativeDocumentMoniker": "task2.h",
+              "ToolTip": "D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\task2.h",
+              "RelativeToolTip": "task2.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-20T14:30:17.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "task_2.cpp",
+              "DocumentMoniker": "D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\task_2.cpp",
+              "RelativeDocumentMoniker": "task_2.cpp",
+              "ToolTip": "D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\task_2.cpp",
+              "RelativeToolTip": "task_2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-20T14:30:13.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "user_name.txt",
+              "DocumentMoniker": "D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\user_name.txt",
+              "RelativeDocumentMoniker": "user_name.txt",
+              "ToolTip": "D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\user_name.txt",
+              "RelativeToolTip": "user_name.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-20T14:29:32.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "position.txt",
+              "DocumentMoniker": "D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\position.txt",
+              "RelativeDocumentMoniker": "position.txt",
+              "ToolTip": "D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\position.txt",
+              "RelativeToolTip": "position.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-20T14:29:23.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "pass.txt",
+              "DocumentMoniker": "D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\pass.txt",
+              "RelativeDocumentMoniker": "pass.txt",
+              "ToolTip": "D:\\Qu\u1ED1c Th\u1EAFng\\FINAL\\Th-ng\\pass.txt",
+              "RelativeToolTip": "pass.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-20T14:29:20.473Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -16,6 +16,9 @@
     <Filter Include="Source Files\task1">
       <UniqueIdentifier>{241e9aad-1fb5-4958-ba93-7dfe2311d4cd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\task_2">
+      <UniqueIdentifier>{ce5aeba0-99bd-430a-a3c1-834750ac52af}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -26,6 +29,9 @@
     </ClCompile>
     <ClCompile Include="task1.cpp">
       <Filter>Source Files\task1</Filter>
+    </ClCompile>
+    <ClCompile Include="task_2.cpp">
+      <Filter>Source Files\task_2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +63,21 @@
     </Text>
     <Text Include="position.txt">
       <Filter>Source Files\task1</Filter>
+    </Text>
+    <Text Include="subject.txt">
+      <Filter>Source Files\task_2</Filter>
+    </Text>
+    <Text Include="quanity.txt">
+      <Filter>Source Files\task_2</Filter>
+    </Text>
+    <Text Include="point.txt">
+      <Filter>Source Files\task_2</Filter>
+    </Text>
+    <Text Include="average.txt">
+      <Filter>Source Files\task_2</Filter>
+    </Text>
+    <Text Include="GPA.txt">
+      <Filter>Source Files\task_2</Filter>
     </Text>
   </ItemGroup>
 </Project>

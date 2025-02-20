@@ -130,6 +130,7 @@
     <ClCompile Include="Header.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="task1.cpp" />
+    <ClCompile Include="task_2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />
@@ -137,8 +138,13 @@
     <ClInclude Include="task2.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="average.txt" />
+    <Text Include="GPA.txt" />
     <Text Include="pass.txt" />
+    <Text Include="point.txt" />
     <Text Include="position.txt" />
+    <Text Include="quanity.txt" />
+    <Text Include="subject.txt" />
     <Text Include="Text.txt" />
     <Text Include="Text1.txt" />
     <Text Include="Text2.txt" />
