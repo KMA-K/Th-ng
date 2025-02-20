@@ -1,0 +1,4 @@
+﻿  task1.cpp
+D:\Quốc Thắng\Thắng\Thắng\task1.cpp(17,21): warning C4018: '<': signed/unsigned mismatch
+D:\Quốc Thắng\Thắng\Thắng\task1.cpp(10,7): warning C4101: 'check': unreferenced local variable
+  Thắng.vcxproj -> D:\Quốc Thắng\Thắng\Debug\Thắng.exe
