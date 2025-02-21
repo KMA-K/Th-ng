@@ -4,13 +4,14 @@
 #include"Windows.h"
 #include<string>
 #include<vector>
+#pragma execution_character_set("utf-8")
 using namespace std;
 struct student {
 	string hoten;
 	string mssv;
 	string lop;
 	string pob;
-	int phone;
+	string phone;
 	student* next;
 };
 struct list {
@@ -19,7 +20,7 @@ struct list {
 	int quantity;
 };
 void studentinfo(student &x);
-void print_student(student x);
+void print_student(list x, int k);
 void make_list(list &x);
 void echo_list(list x);
 void update_list(list& x);

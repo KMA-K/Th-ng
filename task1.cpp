@@ -53,3 +53,88 @@ void ifo_task_1(string username_admin, string pass_admin) {
 	echo_task1("user_name.txt", username);
 	echo_task1("position.txt", position);
 }
+int log_in_member() {
+	SetConsoleOutputCP(CP_UTF8);
+	vector<string>username;//Mảng lưu username
+	username = clone_info("user_name.txt");
+	if (username.empty()) {
+		cout << "erro\n";
+		return -1;
+	}
+	vector<string>password;//Mảng lưu pass
+	password = clone_info("pass.txt");
+	if (password.empty()) {
+		cout << "erro\n";
+		return -1;
+	}
+	vector<string>position;//Mảng lưu chức vụ
+	position = clone_info("position.txt");
+	if (password.empty()) {
+		cout << "erro\n";
+		return -1;
+	}
+	string user, pass;
+	cout << "Nhập username: ";
+	cin.ignore();
+	getline(cin, user);
+	user += ' ';
+	cout << "Nhập pass: ";
+	getline(cin, pass);
+	for (size_t i = 0; i < username.size(); i++) { 
+		//cout << position[i] << " " << password[i]<<" "<< username[i] << endl;
+		if (position[i] == "member" && pass == password[i]) {
+			if (user == username[i]) {
+				cout << "Đăng nhập thành công\n";
+				return static_cast<int>(i);
+			}
+			else {
+				cout << 1 << username[i] << 1 << endl;
+				cout << 1 << user << 1 << endl;
+				cout << "Tên sai" << endl;
+			}
+		}
+	}
+
+	cout << "Đăng nhập thất bại\n";
+	return -1; // Trả về -1 nếu đăng nhập thất bại
+
+}
+int log_in_admin() {
+	SetConsoleOutputCP(CP_UTF8);
+	vector<string>username;//Mảng lưu username
+	username = clone_info("user_name.txt");
+	if (username.empty()) {
+		cout << "erro\n";
+		return -1;
+	}
+	vector<string>password;//Mảng lưu pass
+	password = clone_info("pass.txt");
+	if (password.empty()) {
+		cout << "erro\n";
+		return -1;
+	}
+	vector<string>position;//Mảng lưu chức vụ
+	position = clone_info("position.txt");
+	if (password.empty()) {
+		cout << "erro\n";
+		return -1;
+	}
+	string user, pass;
+	cout << "Nhập username: ";
+	cin.ignore();
+	getline(cin, user);
+	user += ' ';
+	cout << "Nhập pass: ";
+	getline(cin, pass);
+	for (size_t i = 0; i < username.size(); i++) {
+		cout << position[i] << " " << password[i]<<" "<< username[i] << endl;
+		if (position[i] == "admin" && pass == password[i] && user == username[i]) {
+			cout << "Đăng nhập thành công\n";
+			return static_cast<int>(i);
+		}
+	}
+
+	cout << "Đăng nhập thất bại\n";
+	return -1; // Trả về -1 nếu đăng nhập thất bại
+
+}

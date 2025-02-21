@@ -10,12 +10,32 @@ void studentinfo(student &x) {
 	cout << "place: ";
 	getline(cin,x.pob);
 	cout << "phone number: ";
-	cin >> x.phone;	
+	getline(cin, x.phone);
 	x.next = nullptr;
 }
-void print_student(student x) {
-	cout << "hoten " << x.hoten << "   ";
-	cout << "hoten " << x.mssv << "   ";
+void print_student(list x, int k) {
+	SetConsoleOutputCP(CP_UTF8);
+	int dem = 1;
+	student* h = x.head;
+	while (true) {
+		if (x.quantity == 0 || x.quantity < k) {
+			cout << "error\n";
+			break;
+		}
+		else if (dem == k) {
+			cout << "Họ và Tên: " << h->hoten << endl;
+			cout << "Mã số sinh viên: " << h->mssv << endl;
+			cout << "Lớp: " << h->lop << endl;
+			cout << "Nơi sinh: " << h->pob << endl;
+			cout << "Số điện thoại: " << h->phone << endl;
+			break;
+		}
+		else {
+			h = h->next;
+			dem++;
+		}
+	}
+
 }
 void make_list(list &x) {
 	student *mknew=new student();
@@ -87,17 +107,17 @@ void update_list(list& ls_student) {
 		}
 		j += 2;
 		string key5;
-		int jey5;
+		
 		while (j < tmp.length()) {
 			key5 += tmp[j];
 			j++;
 		}
-		jey5 = stoi(key5);
+		
 		mKstu->hoten = key1;
 		mKstu->mssv = key2;
 		mKstu->lop = key3;
 		mKstu->pob = key4;
-		mKstu->phone = jey5;
+		mKstu->phone = key5;
 		mKstu->next = nullptr;
 		//
 		/*cout << key1 << endl;

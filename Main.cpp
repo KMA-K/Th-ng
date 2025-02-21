@@ -1,5 +1,7 @@
 ﻿#include"Header.h"
 #include"task1.h"
+#include"task2.h"
+#include"Menu.h"
 #pragma execution_character_set("utf-8")
 using namespace std;
 int main() {
@@ -14,9 +16,13 @@ int main() {
 	echo_list(list_of_student);
 	free_list(list_of_student);
 	log_in_courses();
-	system("pause");*/
+	system("pause");
 	string name = "Bảo An";
 	string pass = "123224";
 	ifo_task_1(name, pass);
+	update_student_point();
+	scoreboard();
+	update_student_average();*/
+	menu_tinh();
 	return 0;
 }
