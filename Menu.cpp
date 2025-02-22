@@ -67,6 +67,7 @@ void menu_tinh() {
             int tmp_1_1;
             cin >> tmp_1_1;
             if (tmp_1_1 == 1) {
+                cin.ignore();
                 register_std();
             }
             else if(tmp_1_1 == 2) {
