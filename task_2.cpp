@@ -238,8 +238,24 @@ void update_student_average() {
 }
 void scoreboard_1(int x_student) {
     SetConsoleOutputCP(CP_UTF8);
-    vector<string>username;//Mảng lưu tên
-    username = clone_info("user_name.txt");
+    //vector<string>username;//Mảng lưu tên
+    //username = clone_info("user_name.txt");
+    vector<string>username;
+
+    list list_of_student;
+    list_of_student.head = nullptr;
+    list_of_student.tail = nullptr;
+    list_of_student.quantity = 0;
+    update_list(list_of_student);
+
+    int x = list_of_student.quantity;
+    for (int i = 1; i <= x; i++) {
+        string tmp_x;
+        tmp_x = student_x(list_of_student, i);
+        username.push_back(tmp_x);
+    }
+
+    free_list(list_of_student);
     if (username.empty()) {
         cout << "Không có học sinh nào trong danh sách.\n";
         return;
@@ -262,7 +278,7 @@ void scoreboard_1(int x_student) {
     for (int i = 0; i < point.size(); i++) {
         if (i == x_student - 1) {
             gotoxy(0, tmp_y);
-            cout << "Học sinh: " << username[i + 1] << endl;
+            cout << "Học sinh: " << username[i ] << endl;
             cout << "    Môn học          Số tính chỉ   Điểm học phần   Điểm trung bình tín chỉ   Trạng thái học tập   Số tín chỉ đã tích lũy" << endl;
             string s1[9]{ "Xác suất thống kê","Quản trị học","Phương pháp nghiên cứu",
                "Nhập môn CNTT","Kỹ thuật lập trình","Cấu trúc rời rạc","Cơ sở dữ liệu",
@@ -288,12 +304,26 @@ void scoreboard_1(int x_student) {
                 cout << s1[j];
                 gotoxy(27, 3 + tmp_y + j);//số tín chỉ
                 cout << 3;
-                gotoxy(40, 3 + tmp_y + j);//số điểm
-                cout << p[i];
-                gotoxy(60, 3 + tmp_y + j);//điểm trung bình học phần
-                cout << aver[j];
+                //gotoxy(40, 3 + tmp_y + j);//số điểm
+                //cout << p[i];
+                //gotoxy(60, 3 + tmp_y + j);//điểm trung bình học phần
+                //cout << aver[j];
                 // gotoxy(100, 3 + tmp_y + j);//số tín chỉ hoàn thành
+                gotoxy(40, 3 + tmp_y + j);//số điểm
+                if (p[j] == -1) {
+                    gotoxy(35, 3 + tmp_y + j);
+                    cout << "Chưa đăng ký" << endl;
+                }
+                else { cout << p[j]; }
 
+                gotoxy(60, 3 + tmp_y + j);//điểm trung bình học phần
+                if (aver[j] != -1) {
+                    cout << aver[j];
+                }
+                else {
+                    gotoxy(55, 3 + tmp_y + j);
+                    cout << "Chưa đăng ký" << endl;
+                }
                 if (p[j] < 5) {
                     gotoxy(85, 3 + tmp_y + j);//tình trạng học tập
                     cout << "Faile";
