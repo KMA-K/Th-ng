@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="admin.cpp" />
     <ClCompile Include="Header.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu.cpp" />
@@ -134,10 +135,12 @@
     <ClCompile Include="task_2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="admin.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="task1.h" />
     <ClInclude Include="task2.h" />
+    <ClInclude Include="tmp.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="average.txt" />
@@ -147,6 +150,8 @@
     <Text Include="position.txt" />
     <Text Include="quanity.txt" />
     <Text Include="subject.txt" />
+    <Text Include="teacher_pass.txt" />
+    <Text Include="teacher_name.txt" />
     <Text Include="Text.txt" />
     <Text Include="Text1.txt" />
     <Text Include="Text2.txt" />

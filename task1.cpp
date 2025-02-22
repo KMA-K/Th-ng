@@ -127,10 +127,17 @@ int log_in_admin() {
 	cout << "Nhập pass: ";
 	getline(cin, pass);
 	for (size_t i = 0; i < username.size(); i++) {
-		cout << position[i] << " " << password[i]<<" "<< username[i] << endl;
-		if (position[i] == "admin" && pass == password[i] && user == username[i]) {
-			cout << "Đăng nhập thành công\n";
-			return static_cast<int>(i);
+		//cout << position[i] << " " << password[i]<<" "<< username[i] << endl;
+		if (position[i] == "admin" && pass == password[i]) {
+			if (user == username[i]) {
+				cout << "Đăng nhập thành công\n";
+				return static_cast<int>(i);
+			}
+			else {
+				cout << 1 << username[i] << 1 << endl;
+				cout << 1 << user << 1 << endl;
+				cout << "Tên sai" << endl;
+			}
 		}
 	}
 

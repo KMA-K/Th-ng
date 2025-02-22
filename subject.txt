@@ -1,10 +1,1 @@
-﻿Xác suất thống kê
-Quản trị học
-Phương pháp nghiên cứu
-Nhập môn CNTT
-Kỹ thuật lập trình
-Cấu trúc rời rạc
-Cơ sở dữ liệu
-Kiến trúc máy tính
-Mạng máy tính
-Lập trình hướng đối tượng
+﻿

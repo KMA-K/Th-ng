@@ -22,6 +22,9 @@
     <Filter Include="Source Files\Menu">
       <UniqueIdentifier>{ffb7a0db-71ba-4fbd-8d3f-07bd5f951f3c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\admin">
+      <UniqueIdentifier>{79d31884-af28-4558-8344-4967e332c9b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -39,6 +42,9 @@
     <ClCompile Include="Menu.cpp">
       <Filter>Source Files\Menu</Filter>
     </ClCompile>
+    <ClCompile Include="admin.cpp">
+      <Filter>Source Files\admin</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
@@ -51,6 +57,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tmp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="admin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -87,6 +99,12 @@
     </Text>
     <Text Include="GPA.txt">
       <Filter>Source Files\task_2</Filter>
+    </Text>
+    <Text Include="teacher_name.txt">
+      <Filter>Source Files\admin</Filter>
+    </Text>
+    <Text Include="teacher_pass.txt">
+      <Filter>Source Files\admin</Filter>
     </Text>
   </ItemGroup>
 </Project>

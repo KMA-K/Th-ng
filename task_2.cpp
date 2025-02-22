@@ -18,43 +18,67 @@ vector<string> clone_info(string filename) {
 }
 // Định nghĩa template trước khi gọi nó
 void update_student_point() {
+    vector<string> point;
     SetConsoleOutputCP(CP_UTF8);
-    vector<string> username = clone_info("user_name.txt");
-    if (username.empty()) {
-        cout << "Không có học sinh nào trong danh sách.\n";
-        return;
-    }
 
-    string ss[9]{ "Xác suất thống kê", "Quản trị học", "Phương pháp nghiên cứu",
-                  "Nhập môn CNTT", "Kỹ thuật lập trình", "Cấu trúc rời rạc",
-                  "Cơ sở dữ liệu", "Kiến trúc máy tính", "Mạng máy tính" };
+    list list_of_student;
+    list_of_student.head = nullptr;
+    list_of_student.tail = nullptr;
+    list_of_student.quantity = 0;
+    update_list(list_of_student);
 
-    for (int i = 1; i < username.size(); i++) {
-        cout << "Nhập điểm\n";
-        cout << "Học sinh: " << username[i] << endl;
-        vector<int> point;
+    vector<string> v = clone_info("Text1.txt");
+
+    string ss[9] = { "Xác suất thống kê", "Quản trị học", "Phương pháp nghiên cứu",
+                     "Nhập môn CNTT", "Kỹ thuật lập trình", "Cấu trúc rời rạc",
+                     "Cơ sở dữ liệu", "Kiến trúc máy tính", "Mạng máy tính" };
+
+    int n = list_of_student.quantity;
+    for (int i = 0; i < n; i++) {
+        if (i >= v.size()) {
+            cout << "Lỗi: Dữ liệu Text1.txt không đủ!\n";
+            break;
+        }
+
+        string point_1 = "";
+        cout << "Nhập điểm của học sinh: ";
+        print_student_name(list_of_student, i + 1);
+        cout << endl;
+
+        stringstream ss1(v[i]);
+        vector<int> tmp;
+        int curr;
+        while (ss1 >> curr) {
+            tmp.push_back(curr);
+        }
+
         for (int j = 0; j < 9; j++) {
-            cout << ss[j] << ": ";
-            int x;
-            cin >> x;
-            point.push_back(x);
+            bool isRegistered = (find(tmp.begin(), tmp.end(), j) != tmp.end());
+            if (!isRegistered) {
+                cout << ss[j] << ": Không đăng ký\n";
+                point_1 += "-1 ";
+            }
+            else {
+                cout << ss[j] << ": ";
+                int tmp_2;
+                cin >> tmp_2;
+                point_1 += to_string(tmp_2) + " ";
+            }
         }
+        cout << endl;
 
-        cout << "Xác nhận\n";
-        cout << "yes or no\n";
-        cout << "Nhập lựa chọn: ";
-        string tmp;
-        cin >> tmp;
-
-        if (tmp == "yes") {
-            echo_task2("point.txt", point); // Sẽ tìm thấy định nghĩa của template
-            system("cls");
-        }
-        else {
-            system("cls");
-            i = i - 1;
+        if (!point_1.empty()) {
+            point.push_back(point_1);
         }
     }
+    ofstream out;
+    out.open("point.txt",ios::out);
+    for (auto i : point) {
+        out << i << endl;
+    }
+    out.close();
+    
+    free_list(list_of_student);
 }
 void scoreboard() {
     SetConsoleOutputCP(CP_UTF8);
@@ -107,9 +131,20 @@ void scoreboard() {
             gotoxy(27, 3 + tmp_y + j);//số tín chỉ
             cout << 3;
             gotoxy(40, 3+tmp_y+j);//số điểm
-            cout << p[i];
+            if (p[j] == -1) {
+                gotoxy(35, 3 + tmp_y + j);
+                cout << "Chưa đăng ký" << endl;
+            }
+            else{ cout << p[j]; }
+            
             gotoxy(60, 3 + tmp_y + j);//điểm trung bình học phần
-            cout << aver[j];
+            if (aver[j] != -1) {
+                cout << aver[j];
+            }
+            else {
+                gotoxy(55, 3 + tmp_y + j);
+                cout << "Chưa đăng ký" << endl;
+            }
             // gotoxy(100, 3 + tmp_y + j);//số tín chỉ hoàn thành
             
             if (p[j] < 5) {
@@ -137,23 +172,45 @@ void gotoxy(int x, int y) {
 }
 void update_student_average() {
     SetConsoleOutputCP(CP_UTF8);
-    vector<string>point;//Mảng lưu điểm
+    vector<string> point; // Mảng lưu điểm
     point = clone_info("point.txt");
+
     if (point.empty()) {
         cout << "Không có học sinh nào trong danh sách có điểm.\n";
         return;
     }
+
+    vector<string> average_data;
+
     for (int i = 0; i < point.size(); i++) {
         stringstream ss(point[i]);
-        vector<double>v;
+        vector<double> v;
         string x;
+
         while (ss >> x) {
-            double xx = round((stod(x) / 3) * 100) / 100;
-            v.push_back(xx);
+            if (x != "-1") {
+                double xx = round((stod(x) / 3) * 100) / 100; // Tính trung bình
+                v.push_back(xx);
+            }
+            else {
+                v.push_back(-1);
+            }
         }
-        echo_task2_1("average.txt", v);
+
+        // Chuyển vector<double> thành vector<string>
+        stringstream ss_result;
+        for (double value : v) {
+            ss_result << value << " ";
+        }
+        average_data.push_back(ss_result.str());
     }
-    
+    ofstream out;
+    out.open("average.txt", ios::out);
+    for (auto i : average_data) {
+        out << i << endl;
+    }
+    out.close();
+   
 }
 void scoreboard_1(int x_student) {
     SetConsoleOutputCP(CP_UTF8);

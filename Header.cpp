@@ -146,7 +146,7 @@ void fix_data(list& x,int k) {
 		cout << "Nhap thong tin thay doi\n";
 		studentinfo(*tmp);
 		student* current = x.head;
-		while (current->next != nullptr) {
+		while (current->next->next != nullptr) {
 			current = current->next;
 		}
 		current->next = tmp;
@@ -185,39 +185,69 @@ void free_list(list& ls_student) {
 	ls_student.head = nullptr;
 	ls_student.tail = nullptr;
 	ls_student.quantity = 0;
-}
-void log_in_courses() {
-	int k = 0;
-	vector<pair<int,int>>v;
-	ifstream in;
-	in.open("Text1.txt", ios::out);
-	int x;
-	while (in >> x) {
-		int x1;
-		in >> x1;
-		v.push_back(make_pair(x,x1));
-		k++;
+}//Hàm giải phóng bộ nhớ
+void log_in_courses(int k) {
+	string ss[9] = { "Xác suất thống kê", "Quản trị học", "Phương pháp nghiên cứu",
+					 "Nhập môn CNTT", "Kỹ thuật lập trình", "Cấu trúc rời rạc",
+					 "Cơ sở dữ liệu", "Kiến trúc máy tính", "Mạng máy tính" };
+
+	vector<string> v;  
+	ifstream in("Text1.txt");
+	string curr;
+
+	while (getline(in, curr)) {
+		v.push_back(curr);
 	}
 	in.close();
-	ofstream out;
-	out.open("Text1.txt", ios::app);
-	cout << "co dang ky hay khong: neu co nhan yes khong thi nhan no" << endl;
-	string a;
-	cin >> a;
-	if (a == "yes") {
-		k++;
-		v.push_back(make_pair(k, 1));
-		out << v[k-1].first << " " << v[k-1].second << endl;
-	}
-	else if (a == "no") {
-		k++;
-		v.push_back(make_pair(k, 0));
-		out << v[k - 1].first << " " << v[k - 1].second << endl;
-	}
-	else {
-		cout << "dang ky that bai\n";
+
+	vector<int> lg;  
+	for (int i = 0; i < 9; i++) {
+		cout << ss[i] << endl;
+		cout << "Đăng ký (yes/no): ";
+		string tmp;
+		cin >> tmp;
+		if (tmp == "yes") {
+			lg.push_back(i);
+		}
+		else {
+			lg.push_back(-1);
+		}
 	}
 
+	string curr1 = "";
+	for (int i : lg) {
+		curr1 += to_string(i) + " ";
+	}
+
+	while (v.size() <= k) {
+		v.push_back("-1"); 
+	}
+	v[k] = curr1;
+	ofstream out("Text1.txt");
+	for (const string& line : v) {
+		out << line << endl;
+	}
 	out.close();
+}
+void print_student_name(list x, int k) {
+	SetConsoleOutputCP(CP_UTF8);
+	int dem = 1;
+	student* h = x.head;
+	while (true) {
+		if (x.quantity == 0 || x.quantity < k) {
+			cout << "error\n";
+			break;
+		}
+		else if (dem == k) {
+			cout << "Họ và Tên: " << h->hoten;
+			
+			break;
+		}
+		else {
+			h = h->next;
+			dem++;
+		}
+	}
 
 }
+

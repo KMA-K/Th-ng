@@ -5,6 +5,7 @@
 #include<vector>
 #include<sstream>
 #include"Windows.h"
+#include"Menu.h"
 #pragma execution_character_set("utf-8")
 
 using namespace std;
