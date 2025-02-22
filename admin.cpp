@@ -16,7 +16,7 @@ void case3() {
 		update_list(list_of_student);
 	
 		int tmp_1 = list_of_student.quantity;
-		for (int i = 1; i < tmp_1; i++) {
+		for (int i = 1; i <= tmp_1; i++) {
 			cout << "Học sinh số: " << i << endl;
 			print_student(list_of_student, i);
 			cout << endl;
@@ -59,7 +59,7 @@ void case4() {
 	   for (int i = 0; i < subject.size(); i++) {
 		   cout << "Học sinh: "<<i+1 << endl;
 		   cout << "Tên: ";
-		    print_student_name(list_of_student, i + 1);
+		    print_student_name(list_of_student, i+1 );
 			cout << endl;
 			stringstream ss(subject[i]);
 			set<int> v;
@@ -238,7 +238,7 @@ void case5() {
 	update_list(list_of_student);
 
 	int tmp_1 = list_of_student.quantity;
-	for (int i = 1; i < tmp_1; i++) {
+	for (int i = 1; i <= tmp_1; i++) {
 		cout << "Học sinh số: " << i << endl;
 		print_student(list_of_student, i);
 		cout << endl;

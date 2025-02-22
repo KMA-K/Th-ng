@@ -28,3 +28,4 @@ void fix_data(list& x,int k);
 void free_list(list& ls_student);
 void log_in_courses(int k);
 void print_student_name(list x, int k);
+string student_x(list x, int k);

@@ -82,12 +82,36 @@ void update_student_point() {
 }
 void scoreboard() {
     SetConsoleOutputCP(CP_UTF8);
-    vector<string>username;//Mảng lưu tên
-    username = clone_info("user_name.txt");
+   /* vector<string>username;
+    username = clone_info("user_name.txt");*/
+    //
+    vector<string>username;
+
+    list list_of_student;
+    list_of_student.head = nullptr;
+    list_of_student.tail = nullptr;
+    list_of_student.quantity = 0;
+    update_list(list_of_student);
+
+    int x = list_of_student.quantity;
+    for (int i = 1; i <= x; i++) {
+        string tmp_x;
+        tmp_x = student_x(list_of_student, i);
+        username.push_back(tmp_x);
+    }
+
+    free_list(list_of_student);
+  
+   
+
+
+    //
+   //Mảng lưu tên
     if (username.empty()) {
         cout << "Không có học sinh nào trong danh sách.\n";
         return;
     }
+    //------------------------------------------------------
     vector<string>point;//Mảng lưu điểm
     point = clone_info("point.txt");
     if (point.empty()) {
@@ -104,7 +128,7 @@ void scoreboard() {
     tmp_x = 3;
     tmp_y = 0;
     for (int i = 0; i < point.size(); i++) {
-        cout << "Học sinh: "<< username[i + 1] << endl;
+        cout << "Học sinh: "<< username[i] << endl;
         cout << "    Môn học          Số tính chỉ   Điểm học phần   Điểm trung bình tín chỉ   Trạng thái học tập   Số tín chỉ đã tích lũy" << endl;
         string s1[9]{ "Xác suất thống kê","Quản trị học","Phương pháp nghiên cứu",
            "Nhập môn CNTT","Kỹ thuật lập trình","Cấu trúc rời rạc","Cơ sở dữ liệu",

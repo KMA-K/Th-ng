@@ -63,7 +63,7 @@ void echo_list(list x) {
 	}
 	out.close();
 }
-void update_list(list& ls_student) {
+void update_list(list &ls_student) {
 
 	ifstream in;
 	in.open("Text.txt", ios::in);
@@ -141,6 +141,14 @@ void fix_data(list& x,int k) {
 	if (x.quantity == 0|| x.quantity<k ) {
 		cout << "error\n";
 	}
+	
+	else if (k == 1) {
+		student* tmp = new student();
+		cout << "Nhap thong tin thay doi\n";
+		studentinfo(*tmp);
+		tmp->next = x.head->next;
+		x.head = tmp;
+	}
 	else if (x.quantity == k) {
 		student* tmp = new student();
 		cout << "Nhap thong tin thay doi\n";
@@ -151,13 +159,6 @@ void fix_data(list& x,int k) {
 		}
 		current->next = tmp;
 		x.tail = tmp;
-	}
-	else if (k == 1) {
-		student* tmp = new student();
-		cout << "Nhap thong tin thay doi\n";
-		studentinfo(*tmp);
-		tmp->next = x.head->next;
-		x.head = tmp;
 	}
 	else {
 		student* tmp = new student();
@@ -240,6 +241,28 @@ void print_student_name(list x, int k) {
 		}
 		else if (dem == k) {
 			cout << "Họ và Tên: " << h->hoten;
+			
+			break;
+		}
+		else {
+			h = h->next;
+			dem++;
+		}
+	}
+
+}
+string student_x(list x, int k) {
+	SetConsoleOutputCP(CP_UTF8);
+	int dem = 1;
+	student* h = x.head;
+	while (true) {
+		if (x.quantity == 0 || x.quantity < k||k<=0) {
+			cout << "error\n";
+			return "-1";
+			break;
+		}
+		else if (dem == k) {
+			return h->hoten ;
 			
 			break;
 		}
